@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --primary: #ffd416;
+  --secondary: #b0be2d;
+  --dark: #131313;
+  --light: #ffffff;
+  --gray: #f5f5f5;
+  --text: #333333;
+}
+
+body {
+  background-color: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enable smooth scrolling for the whole site */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fallback for when JavaScript is disabled */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-content {
+  flex: 1;
+  padding: 20px 0;
+}

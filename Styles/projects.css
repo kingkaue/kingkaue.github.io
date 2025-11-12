@@ -1,0 +1,106 @@
+/* Project Page Specific Styles */
+.project-header {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), var(--project-bg-image);
+  background-size: cover;
+  background-position: center;
+  color: var(--light);
+  padding: 80px 0 40px;
+}
+
+.project-details {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.project-detail-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.project-detail-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.media-section {
+  padding: 80px 0;
+}
+
+.project-overview {
+  padding: 80px 0;
+  background: var(--gray);
+}
+
+.overview-section {
+  margin-bottom: 40px;
+}
+
+.overview-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.contribution-list {
+  list-style-type: none;
+}
+
+.contribution-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.contribution-list li:before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.back-to-portfolio {
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Header Video */
+.header-video {
+  margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-video .video-container {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.header-video .video-container iframe {
+  width: 100%;
+  height: 400px;
+}

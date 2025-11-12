@@ -1,0 +1,130 @@
+/* Gallery Styles */
+.gallery-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.gallery-main {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: var(--dark);
+  aspect-ratio: 16/9;
+}
+
+.gallery-item {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item.active {
+  display: block;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.gallery-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.gallery-video {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.gallery-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  pointer-events: none;
+}
+
+.gallery-control {
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  pointer-events: all;
+}
+
+.gallery-control:hover {
+  background: var(--primary);
+  transform: scale(1.1);
+}
+
+.gallery-counter {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 60px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border-color: var(--primary);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
