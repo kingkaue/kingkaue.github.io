@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nature's Solace</title>
+    <title>White Maw</title>
+    <link rel="stylesheet" href="Styles/stylesheet.css" />
     <style>
       :root {
-        --project-bg-image: url("../Images/Nature's Solace/Cover.png");
+        --project-bg-image: url("../Images/White Maw/whiteMawLogo.png");
       }
     </style>
-    <link rel="stylesheet" href="Styles/stylesheet.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -46,7 +46,8 @@
     <!-- Project Header -->
     <section class="project-header">
       <div class="container">
-        <h1>Nature's Solace</h1>
+        <h1>White Maw</h1>
+        <h2><i>Currently in Development</i></h2>
 
         <div class="project-info-grid">
           <div>
@@ -55,29 +56,27 @@
                 <iframe
                   width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/l6Tp8k5dgj0?si=i9LCN4_nXtc74Kpt"
+                  src="https://www.youtube.com/embed/nuTZE-v9smI?si=PLMlqb0ThqdaYCBn"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
-                >
-                </iframe>
+                ></iframe>
               </div>
             </div>
             <br />
             <h3>Game Overview</h3>
             <p>
-              After the devastating loss of his wife, Micah's world has turned
-              gray. To heal, he must reconnect with nature at a remote cabin.
-              Find solace in simple acts, such as catching bugs and feeding
-              animals, and watch as color slowly returns to the world with every
-              step forward.
+              A camper is left isolated in the Yukon wilderness as night falls
+              and a creature stalks the camp, drawn in by any noise. The camper
+              must silently manage a dying fire, a limited flashlight, and
+              hunger in order to survive until dawn.
             </p>
 
             <div class="project-buttons">
               <a
-                href="https://remyregaspi.itch.io/natures-solace"
+                href="https://frogsonalog.itch.io/white-maw"
                 class="btn"
                 target="_blank"
               >
@@ -92,17 +91,17 @@
           <div class="project-details">
             <div class="project-detail-item">
               <div class="detail-label">My Role</div>
-              <div class="detail-value">Lead Programmer</div>
+              <div class="detail-value">Gameplay Programmer</div>
             </div>
 
             <div class="project-detail-item">
               <div class="detail-label">Project Duration</div>
-              <div class="detail-value">March 2025 - May 2025</div>
+              <div class="detail-value">November 2025</div>
             </div>
 
             <div class="project-detail-item">
               <div class="detail-label">Genre</div>
-              <div class="detail-value">3D Narrative-Driven RPG</div>
+              <div class="detail-value">3D Survival Horror</div>
             </div>
 
             <div class="project-detail-item">
@@ -117,7 +116,7 @@
 
             <div class="project-detail-item">
               <div class="detail-label">Team Size</div>
-              <div class="detail-value">8 people</div>
+              <div class="detail-value">4 people</div>
             </div>
           </div>
         </div>
@@ -129,9 +128,9 @@
       <div class="container">
         <!-- Single gallery container -->
         <div
-          id="naturesSolaceGallery"
+          id="whitemawGallery"
           class="gallery-container"
-          data-gallery="naturesSolace"
+          data-gallery="whitemaw"
         >
           <!-- Gallery will be automatically initialized here -->
         </div>
@@ -148,17 +147,13 @@
             <div class="overview-section">
               <h3>Development Context</h3>
               <p>
-                <i>Nature's Solace</i> is a 3D narrative-based RPG where players
-                play as Micah, a man who is greiving over the loss of his wife.
-                Players must fill their "spirit meter" by interacting with
-                different parts of nature, such as picking flowers, feeding
-                deer, and catching butterflies.
+                <i>White Maw</i> is a first-person survival horror game where
+                players play as a camper left alone in the snowy Yukon
+                wilderness. Players must survive the night by managing a
+                campfire to keep warm and scavanging for food left by other
+                campers, all while staying quiet to not attract the creature.
               </p>
               <br />
-              <p>
-                This project was submitted as an entry to the 2025 Games for
-                Change competition.
-              </p>
             </div>
           </div>
 
@@ -167,26 +162,21 @@
               <h3>My Contributions</h3>
               <ul class="contribution-list">
                 <li>
-                  Implemented character controls such as walking and
-                  interactions using Unity’s New Input System
+                  Designed a dynamic behavior tree for the creature that adapts
+                  to the noises that players make when moving and interacting
+                  with objects.
                 </li>
                 <li>
-                  Implemented setting controls which allow for changing volume
-                  and camera sensitivity
+                  Implemented sound management system which keeps track of the
+                  player's noise levels and updates the creature's behaviors
+                  accordingly
                 </li>
                 <li>
-                  Implemented a grayscale system using a shader graph that
-                  increases the saturation on the player camera when the player
-                  completes tasks
+                  Implemented audio management system which properly plays audio
+                  sfx at appropriate times
                 </li>
                 <li>
-                  Created a scene loading system between four levels using
-                  additive loading for retaining the status of the hub level
-                </li>
-                <li>
-                  Implemented an inventory system which keeps track of items
-                  picked up at different levels that are accessed in the hub
-                  level
+                  Implemented the campfire and player heat system interactions
                 </li>
               </ul>
             </div>
@@ -205,10 +195,10 @@
     <footer>
       <div class="footer_content">
         <div class="social_links">
-          <a href="#" class="social_link"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="social_link"><i class="fab fa-github"></i></a>
-          <a href="#" class="social_link"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social_link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social_link"></a>
+          <a href="#" class="social_link"></a>
+          <a href="#" class="social_link"></a>
+          <a href="#" class="social_link"></a>
         </div>
       </div>
     </footer>
@@ -216,31 +206,30 @@
     <script src="Scripts/app.js"></script>
     <script src="Scripts/gallery.js"></script>
     <script>
-      // Gallery data for Nature's Solace
-      const naturesSolaceGalleryData = [
+      const whitemawGalleryData = [
         {
           type: "image",
-          src: "Images/Nature's Solace/screenshot1.png",
-          thumbnail: "Images/Nature's Solace/screenshot1.png",
-          title: "Forest Environment",
+          src: "Images/White Maw/ss1.PNG",
+          thumbnail: "Images/White Maw/ss1.PNG",
+          title: "ss1",
         },
         {
           type: "image",
-          src: "Images/Nature's Solace/screenshot2.png",
-          thumbnail: "Images/Nature's Solace/screenshot2.png",
-          title: "Wildlife Interactions",
+          src: "Images/White Maw/ss2.PNG",
+          thumbnail: "Images/White Maw/ss2.PNG",
+          title: "ss2",
         },
         {
           type: "image",
-          src: "Images/Nature's Solace/screenshot3.png",
-          thumbnail: "Images/Nature's Solace/screenshot3.png",
-          title: "Atmospheric Effects",
+          src: "Images/White Maw/ss3.PNG",
+          thumbnail: "Images/White Maw/ss3.PNG",
+          title: "ss3",
         },
         {
           type: "image",
-          src: "Images/Nature's Solace/screenshot4.png",
-          thumbnail: "Images/Nature's Solace/screenshot4.png",
-          title: "Atmospheric Effects",
+          src: "Images/White Maw/ss4.PNG",
+          thumbnail: "Images/White Maw/ss4.PNG",
+          title: "ss4",
         },
       ];
 
@@ -248,8 +237,8 @@
       document.addEventListener("DOMContentLoaded", function () {
         console.log("Manually initializing gallery...");
         const gallery = new MediaGallery(
-          "naturesSolaceGallery",
-          naturesSolaceGalleryData
+          "whitemawGallery",
+          whitemawGalleryData
         );
         console.log("Gallery initialized:", gallery);
       });
