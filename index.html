@@ -1,51 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaue King Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaue King - Gameplay Programmer Portfolio</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
     <nav class="navbar">
-        <div class="navbar_container">
-            <a href="/" id="navbar_logo">
-                <img src="Images/logo.png" alt="Kaue King Logo" class="logo-image">
-            </a>
-            <div class="navbar_toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar_menu">
-                <li class="navbar_item">
-                    <a href="/" class="navbar_links">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/tech.html" class="navbar_links">
-                        Portfolio
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/tech.html" class="navbar_links">
-                        About Me
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/tech.html" class="navbar_links">
-                        Resume
-                    </a>
-                </li>
-                <li class="navbar_item">
-                    <a href="/tech.html" class="navbar_links">
-                        Contact
-                    </a>
-                </li>
-            </ul>
+      <div class="navbar_container">
+        <a href="/" id="navbar_logo">
+          <img src="Images/logo.png" alt="Kaue King Logo" class="logo-image" />
+        </a>
+        <div class="navbar_toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+        <ul class="navbar_menu">
+          <li class="navbar_item">
+            <a href="index.html" class="navbar_links">Home</a>
+          </li>
+          <li class="navbar_item">
+            <a href="#about-section" class="navbar_links">About Me</a>
+          </li>
+          <li class="navbar_item">
+            <a href="portfolio.html" class="navbar_links">Portfolio</a>
+          </li>
+          <li class="navbar_item">
+            <a href="resume.html" class="navbar_links">Resume</a>
+          </li>
+          <li class="navbar_item">
+            <a href="contact.html" class="navbar_links">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <script src="app.js"></script>
-</body>
+
+    <section class="hero">
+      <div class="hero_content">
+        <h1>Kaue King</h1>
+        <p>Gameplay Programmer</p>
+        <a href="portfolio.html" class="btn">View My Work</a>
+      </div>
+    </section>
+
+    <!-- Page Content -->
+    <div class="page-content">
+      <!-- Home Page Content -->
+      <div id="home-page" class="page active">
+        <!-- Portfolio Preview Section -->
+        <section class="portfolio">
+          <div class="container">
+            <h2 class="section_title">Featured <span>Projects</span></h2>
+            <div class="portfolio_grid">
+              <div class="portfolio_item">
+                <div class="portfolio_image">
+                  <img
+                    src="Images/Nature's Solace/Cover.png"
+                    alt="Nature's Solace"
+                  />
+                </div>
+                <div class="portfolio_info">
+                  <h3>Nature's Solace</h3>
+                  <p>
+                    A 3D narrative-based RPG game which explores the
+                    relationship between human emotions and nature.
+                  </p>
+                  <div class="portfolio_tags">
+                    <span class="portfolio_tag">Unity</span>
+                    <span class="portfolio_tag">C#</span>
+                  </div>
+                  <a href="naturessolace.html" class="project-link"
+                    >View Project Details →</a
+                  >
+                </div>
+              </div>
+
+              <div class="portfolio_item">
+                <div class="portfolio_image">
+                  <img
+                    src="Images/Mechanisoul/mechanisoulTempBackground.PNG"
+                    alt="Mechanisoul"
+                  />
+                </div>
+                <div class="portfolio_info">
+                  <h3>Mechanisoul</h3>
+                  <p>
+                    An 3D action soulslike with a dynamic combat and upgrade
+                    system, AI behavior trees, and engaging boss fights.
+                  </p>
+                  <div class="portfolio_tags">
+                    <span class="portfolio_tag">Unity</span>
+                    <span class="portfolio_tag">C#</span>
+                  </div>
+                  <a href="mechanisoul.html" class="project-link"
+                    >View Project Details →</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px">
+              <a href="portfolio.html" class="btn">View All Projects</a>
+            </div>
+
+            <!-- About Preview Section -->
+            <section id="about-section" class="about">
+              <div class="container">
+                <div class="about_content">
+                  <div class="about_image">
+                    <img src="Images/self.jpg" alt="Kaue King" />
+                  </div>
+                  <div class="about_text">
+                    <h3>Hello! I'm Kaue, a passionate gameplay programmer</h3>
+                    <p>
+                      I am currently a student at the University of Central
+                      Florida majoring in Digital Media Game Design. With 3
+                      years of experience in game development, I specialize in
+                      creating engaging gameplay mechanics, character
+                      controllers, and AI systems.
+                    </p>
+                    <p>
+                      My expertise includes C#, Unity, and various game
+                      development tools and frameworks. I thrive in
+                      collaborative environments and enjoy solving complex
+                      technical challenges.
+                    </p>
+
+                    <h3>Skills & Technologies</h3>
+                    <div class="skills">
+                      <span class="skill">C#</span>
+                      <span class="skill">Unity</span>
+                      <span class="skill">Gameplay Programming</span>
+                      <span class="skill">AI Programming</span>
+                      <span class="skill">Tools Development</span>
+                      <span class="skill">Performance Optimization</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer_content">
+        <div class="social_links">
+          <a href="#" class="social_link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social_link"><i class="fab fa-github"></i></a>
+          <a href="#" class="social_link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social_link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="app.js"></script>
 </html>
