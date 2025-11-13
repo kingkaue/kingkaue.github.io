@@ -128,3 +128,20 @@
   height: 100%;
   object-fit: cover;
 }
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Adjust counter position */
+.gallery-counter {
+  bottom: 60px;
+}
