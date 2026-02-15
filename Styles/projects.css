@@ -1,16 +1,15 @@
 /* Project Page Specific Styles */
 .project-header {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), var(--project-bg-image);
-  background-size: cover;
-  background-position: center;
-  color: var(--light);
-  padding: 80px 0 40px;
+  background:
+    linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6)),
+    var(--project-bg-image);
 }
 
 .project-details {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
   padding: 30px;
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   backdrop-filter: blur(10px);
 }
 
@@ -49,19 +48,24 @@
 
 .project-overview {
   padding: 80px 0;
-  background: var(--gray);
+  background: transparent;
 }
 
 .overview-section {
   margin-bottom: 40px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
 }
 
 .overview-section h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  color: var(--dark);
+  color: var(--text);
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .contribution-list {
@@ -95,12 +99,119 @@
 }
 
 .header-video .video-container {
-  border-radius: 10px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .header-video .video-container iframe {
   width: 100%;
   height: 400px;
+}
+
+.hero,
+.page-hero,
+.project-header {
+  color: #ffffff;
+}
+
+.hero h1,
+.page-hero h1,
+.project-header h1 {
+  color: #ffffff;
+}
+
+.hero p,
+.page-hero p,
+.project-header h2,
+.project-header p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.system-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-2);
+  box-shadow: var(--shadow-1);
+  transition: all 0.25s ease;
+}
+
+.system-card:hover {
+  border-color: rgba(60, 255, 154, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(60, 255, 154, 0.15),
+    0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.system-card summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 24px 28px; /* bigger tab */
+  font-size: 1.25rem; /* larger text */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+  background: var(--bg-1);
+}
+
+.system-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.system-card summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  transition: transform 0.25s ease;
+  opacity: 0.7;
+}
+
+.system-card[open] summary::after {
+  content: "–";
+}
+
+.system-body {
+  padding: 24px 28px 28px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.code-snippet {
+  background: #000000;                 /* TRUE black */
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02),
+              0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Add subtle tech accent line */
+.code-snippet::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary),
+    transparent
+  );
+  opacity: 0.4;
+}
+
+.code-snippet pre {
+  margin: 0;
+  padding: 20px 24px;
+  overflow-x: auto;
+}
+
+.code-snippet code {
+  color: #e6edf3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }

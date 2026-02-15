@@ -126,9 +126,29 @@ class SmoothScrollManager {
 }
 
 // Initialize smooth scroll manager when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   new SmoothScrollManager();
+  setupSystemsAccordion();
 });
+
+function setupSystemsAccordion() {
+  document.querySelectorAll(".systems-accordion").forEach((accordion) => {
+    const items = Array.from(accordion.querySelectorAll("details.system-card"));
+
+    // Always start closed (even if an "open" attribute sneaks in)
+    items.forEach((d) => d.removeAttribute("open"));
+
+    // When one opens, close the others
+    items.forEach((d) => {
+      d.addEventListener("toggle", () => {
+        if (!d.open) return;
+        items.forEach((other) => {
+          if (other !== d) other.removeAttribute("open");
+        });
+      });
+    });
+  });
+}
 
 // Handle browser back/forward navigation
 window.addEventListener('hashchange', function() {

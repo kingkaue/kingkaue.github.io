@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S.O.R.N.</title>
+    <link rel="stylesheet" href="Styles/stylesheet.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+    <style>
+        :root {
+            /* Swap this per project */
+            --project-bg-image: url("../Images/YourProject/Cover.png");
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <img src="Images/logo.png" alt="Kaue King Logo" class="logo-image" />
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item"><a href="index.html" class="navbar_links">Home</a></li>
+                <li class="navbar_item"><a href="index.html#about-section" class="navbar_links">About Me</a></li>
+                <li class="navbar_item"><a href="portfolio.html" class="navbar_links">Portfolio</a></li>
+                <li class="navbar_item"><a href="resume.html" class="navbar_links">Resume</a></li>
+                <li class="navbar_item"><a href="contact.html" class="navbar_links">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <h1>S.O.R.N.</h1>
+            <h2><i>Currently in Development</i></h2>
+
+            <div class="project-info-grid">
+                <div>
+                    <div class="header-video">
+                        <div class="video-container">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/f8_dOA7EJJQ?si=ByIdhQIlKJQIo-rw"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <br />
+                    <h3>Game Overview</h3>
+                    <p>
+                        Two PMCs, Nighthawk and Haven, fight for control over a continent. Nighthawk’s
+                        Lieutenant J-12 has been undercover in Haven for 13 years, waiting for the right moment to
+                        strike back after Haven killed his family. Now, J-12 has been authorized for independent
+                        work and begins Nighthawk’s sabotage mission against Haven’s secret Superweapon.
+                    </p>
+
+                    <div class="project-buttons">
+                        <a href="" class="btn" target="_blank">Download on itch.io</a>
+                        <a href="portfolio.html" class="btn btn-outline">Back to Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">My Role</div>
+                        <div class="detail-value">Systems Programmer</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Project Duration</div>
+                        <div class="detail-value">Aug 2025 - May 2026</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Genre</div>
+                        <div class="detail-value">Action Mech Shooter</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Platform</div>
+                        <div class="detail-value">PC</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Engine</div>
+                        <div class="detail-value">Unreal Engine 5</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Team Size</div>
+                        <div class="detail-value">15 people</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section with Gallery -->
+    <section class="media-section">
+        <div class="container">
+            <div id="projectGallery" class="gallery-container" data-gallery="project">
+                <!-- Gallery will be automatically initialized here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <h2 class="section_title">Project <span>Overview</span></h2>
+
+            <div class="overview-grid">
+                <div>
+                    <div class="overview-section">
+                        <h3>Development Context</h3>
+                        <p>
+                            S.O.R.N. is a third-person action mech shooter developed by a team of 15 students at UCF
+                            over the course of an academic year.
+                            The game is built in Unreal Engine 5 and features a variety of gameplay pillars including
+                            mech combat and customizaion, narrative exploration,
+                            and AI-driven enemy encounters.
+                        </p>
+                        <br />
+                        <p>
+                            The game features a complex combat and upgrade system using Unreal's Gameplay Ability
+                            System. Players can customize their mech with
+                            different weapons, abilities, and loadouts to suit their playstyle. It also features
+                            cooperative multiplayer, allowing players to team up
+                            together against challenging AI enemies and bosses.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="overview-section">
+                        <h3>My Contributions</h3>
+                        <ul class="contribution-list">
+                            <li>Implemented a complex customization system for mechs using Unreal's Gameplay Ability
+                                System which allows players to modify their mech's parts and weapons.</li>
+                            <li>Implemented several weapons with unique properties and behaviors.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-overview">
+        <div class="container">
+            <h2 class="section_title">Systems <span>&amp; Implementation</span></h2>
+            <div>
+                <div class="systems-accordion">
+                    <details class="system-card">
+                        <summary>Mech Part Switching</summary>
+                        <div class="system-body">
+                            <p>
+                                Player mechs are highly customizable with different parts including arms, legs, and
+                                torsos. Each part provides different stats
+                                which are then applied to the player using Unreal's Gameplay Ability System. The system
+                                uses data assets for each part which holds the
+                                gameplay effect to be applied to the player, as well as the corresponding skeletal
+                                meshes and effects.
+                            </p>
+                            <br />
+                            <h5>Weapon Switching</h5>
+                            <iframe width="1050" height="700"
+                                src="Videos/SORN/WeaponChange.webm"
+                                title="WeaponChange" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br />
+                            <br />
+                            <h5>In MechCharacter.cpp</h5>
+                            <div aria-label="Code snippet" class="code-snippet">
+                                <pre><code>void AMechCharacter::ChangeMechPart(EMechBodyPart MechPart, UDA_MechPartData* PartData)
+{
+	HandleMechPartGameplayEffect(MechPart, PartData);
+	UpdateMechPartVisuals(MechPart, PartData);
+}
+
+void AMechCharacter::HandleMechPartGameplayEffect(EMechBodyPart MechPart, UDA_MechPartData* PartData)
+{
+	// Removes current effect for part if it exists
+	if (ActivePartEffectHandles.Contains(MechPart))
+	{
+		FActiveGameplayEffectHandle Handle = ActivePartEffectHandles[MechPart];
+
+		if (Handle.IsValid())
+		{
+			SORNAbilitySystemComponent->RemoveActiveGameplayEffect(Handle);
+		}
+
+		ActivePartEffectHandles.Remove(MechPart);
+	}
+
+	// Apply the new gameplay effect
+	if (PartData && PartData->GameplayEffect)
+	{
+		FActiveGameplayEffectHandle NewHandle = SORNAbilitySystemComponent->ApplyGameplayEffectByClass(PartData->GameplayEffect);
+
+		if (NewHandle.IsValid())
+		{
+			ActivePartEffectHandles.Add(MechPart, NewHandle);
+		}
+	}
+}
+
+void AMechCharacter::UpdateMechPartVisuals(EMechBodyPart MechPart, UDA_MechPartData* PartData)
+{
+	// Update part data reference
+	switch (MechPart)
+	{
+	case EMechBodyPart::EMBP_Legs:
+		{
+			LegsPartData = PartData;
+			GetMesh()->SetSkeletalMesh(LegsPartData->Mesh);
+			GetMesh()->SetAnimInstanceClass(LegsPartData->AnimBP);
+			AttachEngineEffectsToSockets(GetMesh(), LegsPartData->EngineAttachPoints, LegsPartData->EngineEffect);
+			break;
+		}
+	case EMechBodyPart::EMBP_UpperBody:
+		{
+			UpperBodyData = PartData;
+			UpperBodyMeshComponent->SetSkeletalMesh(UpperBodyData->Mesh);
+			UpperBodyMeshComponent->SetAnimInstanceClass(UpperBodyData->AnimBP);
+			AttachEngineEffectsToSockets(UpperBodyMeshComponent, UpperBodyData->EngineAttachPoints, UpperBodyData->EngineEffect);
+			break;
+		}
+	case EMechBodyPart::EMBP_LeftArm:
+		{
+			LeftArmPartData = PartData;
+			LeftArmMeshComponent->SetSkeletalMesh(LeftArmPartData->Mesh);
+			LeftArmMeshComponent->SetAnimInstanceClass(LeftArmPartData->AnimBP);
+			AttachEngineEffectsToSockets(LeftArmMeshComponent, LeftArmPartData->EngineAttachPoints, LeftArmPartData->EngineEffect);
+			break;
+		}
+	case EMechBodyPart::EMBP_RightArm:
+		{
+			RightArmPartData = PartData;
+			RightArmMeshComponent->SetSkeletalMesh(RightArmPartData->Mesh);
+			RightArmMeshComponent->SetAnimInstanceClass(RightArmPartData->AnimBP);
+			AttachEngineEffectsToSockets(RightArmMeshComponent, RightArmPartData->EngineAttachPoints, RightArmPartData->EngineEffect);
+			break;
+		}
+	default:
+		return;
+	}
+}</code></pre>
+                            </div>
+                            <br />
+                            <h5>Customization UI blueprint which handles leg part switching</h5>
+                            <div aria-label="Code snippet" class="code-snippet">
+                                <iframe width="1050" height="700" src="https://blueprintue.com/render/qzfwtbx0/"
+                                    scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="system-card">
+                        <summary>Color Customization</summary>
+                        <div class="system-body">
+                            <p>
+                                In addition to part switching, players can also customize the colors of their mech.
+                                There is a master material which has parameters for
+                                a texture mask, a primary color, and a secondary color. There is then a series of lerp
+                                and multiply nodes which blend the colors
+                                based on the texture mask. Players can select their colors using a color picker UI, and the selected colors are then applied
+                                to the material parameters using a dynamic material instance.
+                            </p>
+                            <br />
+                            <h5>Color Customization</h5>
+                            <iframe width="1050" height="700"
+                                src="Videos/SORN/Color Customization.webm"
+                                title="ColorCustomization" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br />
+                            <br />
+                            <h5>Mech Master Material Blueprint</h5>
+                            <div aria-label="Code snippet" class="code-snippet">
+                                <iframe width="1050" height="700" src="https://blueprintue.com/render/wa-woxm6/"
+                                    scrolling="no" allowfullscreen></iframe>
+                            </div>
+                            <br />
+                            <h5>Color Customization Blueprint for legs</h5>
+                            <div aria-label="Code snippet" class="code-snippet">
+                                <iframe width="1050" height="700" src="https://blueprintue.com/render/_56ezz0f/"
+                                    scrolling="no" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="system-card">
+                        <summary>Weapons</summary>
+                        <div class="system-body">
+                            <p>
+                                Mechs can equip different weapons on their arms which are then used in combat. Each weapon has its own unique behavior 
+                                and properties, and they are implemented using Unreal's Gameplay Ability System. There is a base weapon class which
+                                is used for standard weapons, such as the minigun and shotgun. A charged weapon class inherits this class and is used for
+                                the railgun and charge pistol. The final weapon class is the beam weapon which shoots a laset that deals consistent tick damage.
+                            </p>
+                            <br />
+                            <h5>Shotgun</h5>
+                            <iframe width="1050" height="700"
+                                src="Videos/SORN/Shotgun.mp4"
+                                title="Shotgun" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br />
+                            <br />
+                            <h5>Charge Pistol</h5>
+                            <p>The charge pistol has a charging bonus where the damage scales with the charge time. Additionally, if players release the fire button 
+                                within a short window, it deals additional damage.
+                            </p>
+                            <iframe width="1050" height="700"
+                                src="Videos/SORN/Pistol and Scaling Damage.webm"
+                                title="Charge Pistol" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br />
+                            <br />
+                            <h5>Railgun</h5>
+                            <iframe width="1050" height="700"
+                                src="Videos/SORN/Railgun.webm"
+                                title="Railgun" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br />
+                            <br />
+                            <h5>Beam</h5>
+                            <iframe width="1050" height="700"
+                                src="Videos/SORN/Laser.mp4"
+                                title="Beam" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <br />
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-overview">
+        <div class="container">
+            <div class="back-to-portfolio">
+                <a href="portfolio.html" class="btn">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_content">
+            <div class="social_links">
+                <a href="#" class="social_link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social_link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social_link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social_link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/gallery.js"></script>
+    <script>
+        // Example gallery data
+        const projectGalleryData = [
+            {
+                type: "image",
+                src: "Images/SORN/Hub.png",
+                thumbnail: "Images/SORN/Hub.png",
+                title: "Hub Screen",
+            },
+            {
+                type: "image",
+                src: "Images/SORN/Customization.png",
+                thumbnail: "Images/SORN/Customization.png",
+                title: "Customization Screen",
+            },
+            {
+                type: "image",
+                src: "Images/SORN/ss1.png",
+                thumbnail: "Images/SORN/ss1.png",
+                title: "Gameplay",
+            },
+        ];
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const gallery = new MediaGallery("projectGallery", projectGalleryData);
+            console.log("Gallery initialized:", gallery);
+        });
+    </script>
+</body>
+
+</html>

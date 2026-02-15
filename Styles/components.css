@@ -2,30 +2,32 @@
 .btn {
   display: inline-block;
   background: var(--primary);
-  color: var(--light);
+  color: var(--bg-0);
   padding: 12px 30px;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: bold;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
 }
 
 .btn:hover {
   background: var(--secondary);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 3px rgba(60,255,154,0.14), var(--shadow-md);
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--light);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
 }
 
 .btn-outline:hover {
-  background: var(--primary);
+  background: rgba(60,255,154,0.10);
+  border-color: rgba(60,255,154,0.45);
 }
 
 /* Skills & Tags */
@@ -37,7 +39,7 @@
 }
 
 .skill {
-  background: var(--gray);
+  background: rgba(255,255,255,0.06);
   padding: 8px 15px;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -50,7 +52,7 @@
 }
 
 .portfolio_tag {
-  background: var(--gray);
+  background: rgba(255,255,255,0.06);
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 0.8rem;
@@ -69,9 +71,12 @@
 
 .form_control {
   padding: 12px 15px;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
   font-size: 1rem;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 textarea.form_control {
@@ -91,16 +96,103 @@ textarea.form_control {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--dark);
+  background: rgba(255,255,255,0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--light);
+  color: var(--text);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .social_link:hover {
   background: var(--primary);
   transform: translateY(-5px);
+}
+.form_control:focus {
+  outline: none;
+  border-color: rgba(60,255,154,0.55);
+  box-shadow: 0 0 0 3px rgba(60,255,154,0.12);
+}
+
+/* Systems accordion (details/summary) */
+.systems-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.system-card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.system-card summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  padding: 18px 20px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.system-card summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Chevron (requires Font Awesome) */
+.system-card summary::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  opacity: 0.9;
+  transition: transform 0.28s ease;
+}
+
+.system-card[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.system-card summary:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+
+.system-card .system-body {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+  padding: 0 20px;
+  transition:
+    max-height 0.38s ease,
+    opacity 0.22s ease,
+    transform 0.22s ease,
+    padding 0.22s ease;
+}
+
+.system-card[open] .system-body {
+  max-height: 5000px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 0 20px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.system-card > .system-body {
+  display: block !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .system-card summary::after,
+  .system-card .system-body {
+    transition: none;
+  }
 }

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crystal Deadline</title>
+    <link rel="stylesheet" href="Styles/stylesheet.css" />
+    <style>
+        :root {
+            --project-bg-image: url("../Images/Crystal Deadline/CrystalDeadlineCover.png");
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="index.html" id="navbar_logo">
+                <img src="Images/logo.png" alt="Kaue King Logo" class="logo-image" />
+            </a>
+            <div class="navbar_toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item"><a href="index.html" class="navbar_links">Home</a></li>
+                <li class="navbar_item"><a href="index.html#about-section" class="navbar_links">About Me</a></li>
+                <li class="navbar_item"><a href="portfolio.html" class="navbar_links">Portfolio</a></li>
+                <li class="navbar_item"><a href="resume.html" class="navbar_links">Resume</a></li>
+                <li class="navbar_item"><a href="contact.html" class="navbar_links">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <h1>Crystal Deadline</h1>
+            <!-- Optional: <h2><i>Currently in Development</i></h2> -->
+
+            <div class="project-info-grid">
+                <div>
+                    <div class="header-video">
+                        <div class="video-container">
+                            <!-- Replace with your trailer / gameplay video -->
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/jIQt4ihN2gE?si=-N7QbSIlyLi31BKl"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <br />
+                    <h3>Game Overview</h3>
+                    <p>
+                        An astronaut crystal miner must dive into the depths of an asteroid to mine precious crystals
+                        before the cave collapses, while also
+                        making sure to meet the shop keeper's daily quota.
+                    </p>
+
+                    <div class="project-buttons">
+                        <a href="" class="btn" target="_blank">Download on itch.io</a>
+                        <a href="portfolio.html" class="btn btn-outline">Back to Portfolio</a>
+                    </div>
+                </div>
+
+                <div class="project-details">
+                    <div class="project-detail-item">
+                        <div class="detail-label">My Role</div>
+                        <div class="detail-value">Gameplay / Systems Programmer</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Project Duration</div>
+                        <div class="detail-value">Jan 2026 - Jan 2026</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Genre</div>
+                        <div class="detail-value">3D Dungeon Crawler</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Platform</div>
+                        <div class="detail-value">PC</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Engine</div>
+                        <div class="detail-value">Unity</div>
+                    </div>
+
+                    <div class="project-detail-item">
+                        <div class="detail-label">Team Size</div>
+                        <div class="detail-value">4 people</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section with Gallery -->
+    <section class="media-section">
+        <div class="container">
+            <div id="projectGallery" class="gallery-container" data-gallery="project">
+                <!-- Gallery will be automatically initialized here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <h2 class="section_title">Project <span>Overview</span></h2>
+
+            <div class="overview-grid">
+                <div>
+                    <div class="overview-section">
+                        <h3>Development Context</h3>
+                        <p>
+                            Crystal Deadline was developed as a part of the 2026 FIEA Game Jam with a team of 4 over the
+                            course of 48 hours.
+                            The theme of the jam was "Exploration", which inspired our core gameplay loop of exploring a
+                            cave system within an asteroid
+                            and mining crystals to meet a quota.
+                        </p>
+                        <br />
+                        <p>
+                            Players have 3 2-minute runs to mine crystals and meet the shop keeper's $3000 quota.
+                            Between each run, players can spend
+                            their earnings on upgrades to help them mine more efficiently in the next run. The cave
+                            system is procedurally generated,
+                            with new biomes and crystal types showing up as players progress deeper into the asteroid.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="overview-section">
+                        <h3>My Contributions</h3>
+                        <ul class="contribution-list">
+                            <li>Implemented a versatile upgrade system using scriptable objects that can handle several
+                                upgrade stats and types.</li>
+                            <li>Implemented the functionality of the shotgun, pickaxe, and torches.</li>
+                            <li>Implemented a dynamic UI that updates in real-time to reflect player progress and tool
+                                indicators.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Systems & Implementation -->
+    <section class="project-systems" id="systems">
+        <div class="container">
+            <h2 class="section_title">Systems <span>&amp; Implementation</span></h2>
+            <div class="systems-accordion">
+                <details class="system-card">
+                    <summary><span class="system-title">Upgrade System</span></summary>
+                    <div class="system-body">
+                        <p>The upgrade pipeline is data-driven: base stats live in a <strong>Stats</strong>
+                            ScriptableObject, and upgrades are defined
+                            as reusable <strong>StatsUpgrade</strong> assets. Tools read stat values through
+                            <code>Stats.GetStat()</code>, which automatically
+                            applies any unlocked upgrades from the shop.
+                        </p>
+                        <h4>Stats.cs (upgraded stat resolution)</h4>
+                        <div class="code-snippet" aria-label="Code snippet">
+                            <pre><code class="language-csharp">public float GetStat(Stat stat)
+    {
+        if (instanceStats != null)
+        {
+            foreach (var s in instanceStats)
+            {
+                if (s.statType == stat)
+                {
+                    return GetUpgradedValue(stat, s.statValue);
+                }
+            }
+        }
+
+        if (stats != null)
+        {
+            foreach (var s in stats)
+            {
+                if (s.statType == stat)
+                {
+                    return GetUpgradedValue(stat, s.statValue);
+                }
+            }
+        }
+
+        return 0;
+    }
+
+public void UnlockUpgrade(StatsUpgrade upgrade)
+    {
+        appliedUpgrades.Add(upgrade);
+    }
+
+private float GetUpgradedValue(Stat stat, float baseValue)
+    {
+        foreach (var upgrade in appliedUpgrades)
+        {
+            if (!upgrade.upgradeToApply.Exists(x => x.statType == stat))
+                continue;
+
+            if (upgrade.isPercentageUpgrade)
+            {
+                float percentageIncrease = upgrade.upgradeToApply.Find(x => x.statType == stat).statValue;
+                baseValue += baseValue * (percentageIncrease / 100f);
+            }
+            else
+            {
+                float flatIncrease = upgrade.upgradeToApply.Find(x => x.statType == stat).statValue;
+                baseValue += flatIncrease;
+            }
+        }
+
+        return baseValue;
+    }</code></pre>
+                        </div>
+                        <h4>UpgradeHandler.cs (re-applying saved upgrade levels)</h4>
+                        <div class="code-snippet" aria-label="Code snippet">
+                            <pre><code class="language-csharp">public void ApplyUpgrades()
+    {
+        currentShotgunLevel = GameManager.Instance.shotgunLevel;
+        currentPickaxeLevel = GameManager.Instance.pickaxeLevel;
+        currentTorchLevel = GameManager.Instance.torchLimitLevel;
+        currentPlayerMaxHealthLevel = GameManager.Instance.playerHealthLevel;
+        currentPlayerMovementSpeedLevel = GameManager.Instance.playerSpeedLevel;
+        currentPlayerDefenseLevel = GameManager.Instance.playerDefenceLevel;
+
+        for (int i = 0; i < currentShotgunLevel; i++)
+        {
+            ApplyShotgunUpgrade();
+        }
+        for (int i = 0; i < currentPickaxeLevel; i++)
+        {
+            ApplyPickaxeUpgrade();
+        }
+        for (int i = 0; i < currentTorchLevel; i++)
+        {
+            ApplyTorchUpgrade();
+        }
+        for (int i = 0; i < currentPlayerMaxHealthLevel; i++)
+        {
+            ApplyPlayerHealthUpgrade();
+        }
+        for (int i = 0; i < currentPlayerMovementSpeedLevel; i++)
+        {
+            ApplyPlayerMovementSpeedUpgrade();
+        }
+        for (int i = 0; i < currentPlayerDefenseLevel; i++)
+        {
+            ApplyPlayerDefenseUpgrade();
+        }
+    }</code></pre>
+                        </div>
+                    </div>
+                </details>
+                <details class="system-card">
+                    <summary><span class="system-title">Shotgun Firing</span></summary>
+                    <div class="system-body">
+                        <p>The shotgun inherits from a generic <strong>Gun</strong> base class. Each shot consumes one
+                            ammo, then fires multiple pellets
+                            using randomized spread. Damage is divided across pellets so the total damage stays
+                            consistent while you tune pellet count.</p>
+                        <h4>In Shotgun.cs (Shoot override)</h4>
+                        <div class="code-snippet" aria-label="Code snippet">
+                            <pre><code class="language-csharp">public override void Shoot()
+    {
+        if (Time.time < nextFireTime || currentAmmo <= 0 || !canShoot)
+            return;
+
+        currentAmmo--;
+        TriggerAmmoChanged();
+
+        int pelletsPerShot = (int)gunStatsScriptableObject.GetStat(Stat.bulletsPerShot);
+        for (int i = 0; i < pelletsPerShot; i++)
+        { 
+            Vector3 shootDirection = GetShootingDirection();
+            HandleBullets(shootDirection, gunStatsScriptableObject.GetStat(Stat.damage) / pelletsPerShot);
+        }
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayShotgunSound();
+        }
+
+        if (shellParticles != null)
+        {
+            shellParticles.Play();
+        }
+        
+        if (shellParticlesLeft != null)
+        {
+            shellParticlesLeft.Play();
+        }
+        
+        if (muzzleFlash != null)
+        {
+            muzzleFlash.Play();
+        }
+        
+        if (muzzleFlashLight != null)
+        {
+            StartCoroutine(FlashMuzzleLight());
+        }
+
+        if (CameraShake.Instance != null)
+        {
+            CameraShake.Instance.Shake(shakeDuration, shakeMagnitude, shakeRotationMagnitude);
+        }
+
+        nextFireTime = Time.time + (gunStatsScriptableObject.GetStat(Stat.fireRate));
+    }</code></pre>
+                        </div>
+                    </div>
+                </details>
+                <details class="system-card">
+                    <summary><span class="system-title">Mining / Pickaxe</span></summary>
+                    <div class="system-body">
+                        <p>Mining uses a short-range <code>SphereCast</code> from the camera. If the cast hits a child
+                            collider, the script checks the parent tagged <code>Mineable</code> and calls into the
+                            <code>Crystal</code> component to apply mining damage.
+                        </p>
+                        <h4>In Pickaxe.cs (SphereCast + mining hit validation)</h4>
+                        <div class="code-snippet" aria-label="Code snippet">
+                            <pre><code class="language-csharp">public void Mine()
+    {
+        if (Time.time < nextMineTime)
+            return;
+
+        Debug.Log($"[PICKAXE] Mine called - Camera Position: {cameraTransform.position}, Forward: {cameraTransform.forward}, Reach Distance: {reachDistance}");
+
+        RaycastHit hit;
+        bool didHit = Physics.SphereCast(cameraTransform.position, 0.3f, cameraTransform.forward, out hit, reachDistance, ~0, QueryTriggerInteraction.Collide);
+        
+        Debug.DrawRay(cameraTransform.position, cameraTransform.forward * reachDistance, didHit ? Color.green : Color.red, 1f);
+        
+        if (didHit)
+        {
+            Debug.Log($"[PICKAXE] HIT something! Name: {hit.transform.name}, Tag: {hit.transform.tag}, Distance: {hit.distance}, Layer: {LayerMask.LayerToName(hit.transform.gameObject.layer)}");
+            
+            Transform targetTransform = hit.transform;
+            
+            if (!targetTransform.CompareTag("Mineable") && targetTransform.parent != null && targetTransform.parent.CompareTag("Mineable"))
+            {
+                Debug.Log($"[PICKAXE] Child hit, checking parent: {targetTransform.parent.name}");
+                targetTransform = targetTransform.parent;
+            }
+            
+            if (targetTransform.CompareTag("Mineable"))
+            {
+                Debug.Log($"[PICKAXE] Trying to mine {targetTransform.name}, looking for Crystal component...");
+                Crystal crystal = targetTransform.GetComponentInParent<Crystal>();
+                
+                if (crystal != null)
+                {
+                    Debug.Log($"[PICKAXE] Mining {crystal.name}");
+                    crystal.MineCrystal(pickaxeStatsScriptableObject.GetStat(Stat.miningDamage), hit.point, hit.normal);
+                    UpdateCrystalHealthBar(crystal);
+
+                    //added by char
+                    if (!isSwinging)
+                        StartCoroutine(Swing());
+                }
+                else
+                {
+                    Debug.LogError($"[PICKAXE] Hit object '{targetTransform.name}' tagged 'Mineable' but has no Crystal component in parent hierarchy!");
+                }
+            }
+            else
+            {
+                Debug.LogWarning($"[PICKAXE] Hit object '{hit.transform.name}' but tag is '{hit.transform.tag}' not 'Mineable'");
+            }
+        }
+        else
+        {
+            Debug.Log($"[PICKAXE] No hit detected within reach distance {reachDistance}");
+        }
+
+        nextMineTime = Time.time + (pickaxeStatsScriptableObject.GetStat(Stat.miningSpeed));
+    }</code></pre>
+                        </div>
+                    </div>
+                </details>
+                <details class="system-card">
+                    <summary><span class="system-title">Torch Placement</span></summary>
+                    <div class="system-body">
+                        <p>Torches can be placed on both ground and walls. A placement raycast validates surfaces via
+                            tags, offsets the spawn slightly off the surface normal, and
+                            tilts wall torches so they read better visually. The tool exposes an event so the UI can
+                            update torch count.</p>
+                        <h4>In Torch.cs (PlaceTorch)</h4>
+                        <div class="code-snippet" aria-label="Code snippet">
+                            <pre><code class="language-csharp">private void PlaceTorch()
+    {
+        if (cameraTransform == null)
+        {
+            Debug.LogWarning("Torch: Camera transform is not assigned!");
+            return;
+        }
+
+        RaycastHit hit;
+
+        if (!Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, placeDistance))
+        {
+            Debug.Log("No surface hit");
+            return;
+        }
+
+        if (!hit.transform.CompareTag("Wall") && !hit.transform.CompareTag("Ground"))
+        {
+            Debug.Log("Invalid surface");
+            return;
+        }
+
+        if (currentNumberOfTorches <= 0)
+        {
+            Debug.Log("No torches left");
+            return;
+        }
+
+        Vector3 spawnPosition = hit.point + hit.normal * 0.05f;
+
+        Quaternion spawnRotation;
+
+        bool isGround = Vector3.Dot(hit.normal, Vector3.up) > 0.75f;
+
+        if (isGround)
+        {
+            spawnRotation = Quaternion.identity;
+        }
+        else
+        {
+            Quaternion faceOut = Quaternion.LookRotation(hit.normal);
+
+            spawnRotation = faceOut * Quaternion.Euler(20f, 0f, 0f);
+        }
+
+        Instantiate(torch, spawnPosition, spawnRotation);
+        currentNumberOfTorches--;
+        if (currentNumberOfTorches <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
+        OnTorchCountChanged?.Invoke();
+    }</code></pre>
+                        </div>
+                    </div>
+                </details>
+                <details class="system-card">
+                    <summary><span class="system-title">Tool HUD</span></summary>
+                    <div class="system-body">
+                        <p>The HUD listens to events from the active tool (ammo changed / torch count changed) and from
+                            the tool switcher. This keeps UI updates responsive without polling every frame.</p>
+                        <h4>In ToolUIManager.cs</h4>
+                        <div class="code-snippet" aria-label="Code snippet">
+                            <pre><code class="language-csharp">private void OnToolSwitched(GameObject activeTool)
+    {
+        ResetIndicator();
+
+        if (activeTool == gun.gameObject)
+        {
+            ShowAmmoUI();
+            UpdateAmmoDisplay();
+        }
+        else
+        {
+            HideAllUI();
+        }
+    }
+
+    private void ResetIndicator()
+    {
+        circleIndicator.gameObject.SetActive(false);
+        circleIndicator.fillAmount = 1f;
+    }
+
+    private void UpdateAmmoDisplay()
+    {
+        if (gun != null && ammoText != null)
+        {
+            int currentAmmo = Mathf.FloorToInt(gun.currentAmmo);
+            int maxAmmo = Mathf.FloorToInt(gun.gunStatsScriptableObject.GetStat(Stat.maxAmmo));
+            ammoText.text = $"{currentAmmo}/{maxAmmo}";
+        }
+    }
+
+    private void UpdateTorchDisplay()
+    {
+        if (torch != null && torchText != null)
+        {
+            int torchCount = torch.GetTorchCount();
+            torchText.text = torchCount.ToString();
+        }
+    }
+
+    private void ShowAmmoUI()
+    {
+        if (ammoText.gameObject != null)
+            ammoText.gameObject.SetActive(true);
+        
+        toolIcon.sprite = gunSprite;
+    }</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- What I Learned -->
+    <section class="project-overview">
+        <div class="container">
+            <h2 class="section_title">What I <span>Learned</span></h2>
+            <div class="overview-section">
+                <p>One of the biggest takeaways I had from this project was from my first experience participating in a
+                    game jam. Because
+                    it was my first jam, I went in with a lot of ambition and ideas for features to implement, but
+                    quickly realized that I had to be very
+                    attentive to scope management in order to deliver a well polished game within the 48 hour time
+                    limit. Overall, it was a great learning
+                    experience and I look forward
+                    to participating in more game jams in the future!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-overview">
+        <div class="container">
+            <div class="back-to-portfolio">
+                <a href="portfolio.html" class="btn">
+                    <i class="fas fa-arrow-left"></i> Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_content">
+            <div class="social_links">
+                <a href="#" class="social_link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social_link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social_link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social_link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Scripts/app.js"></script>
+    <script src="Scripts/gallery.js"></script>
+    <script>
+        // Example gallery data
+        const projectGalleryData = [
+            {
+                type: "image",
+                src: "Images/Crystal Deadline/ss1.png",
+                thumbnail: "Images/Crystal Deadline/ss1.png",
+                title: "Title Screen",
+            },
+            {
+                type: "image",
+                src: "Images/Crystal Deadline/ss2.png",
+                thumbnail: "Images/Crystal Deadline/ss2.png",
+                title: "Gameplay - Mining Crystals",
+            },
+            {
+                type: "image",
+                src: "Images/Crystal Deadline/ss3.png",
+                thumbnail: "Images/Crystal Deadline/ss3.png",
+                title: "Gameplay - Enemy",
+            },
+            {
+                type: "image",
+                src: "Images/Crystal Deadline/ss4.png",
+                thumbnail: "Images/Crystal Deadline/ss4.png",
+                title: "Shop Upgrades",
+            },
+        ];
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const gallery = new MediaGallery("projectGallery", projectGalleryData);
+            console.log("Gallery initialized:", gallery);
+        });
+    </script>
+</body>
+
+</html>

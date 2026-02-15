@@ -1,5 +1,7 @@
 .navbar {
-  background: var(--dark);
+  background: rgba(11,15,20,0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -46,7 +48,7 @@
 }
 
 .navbar_links {
-  color: var(--light);
+  color: var(--text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,5 +73,23 @@
   height: 3px;
   margin: 3px auto;
   transition: all 0.3s ease-in-out;
-  background: var(--light);
+  background: var(--text);
+}
+.navbar_links {
+  position: relative;
+}
+
+.navbar_links::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 18px;
+  height: 2px;
+  background: rgba(60,255,154,0.0);
+  transition: background 0.2s ease;
+}
+
+.navbar_links:hover::after {
+  background: rgba(60,255,154,0.55);
 }
