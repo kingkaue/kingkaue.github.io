@@ -1,152 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Title</title>
-    <link rel="stylesheet" href="Styles/stylesheet.css" />
-    <style>
-      :root {
-        /* Swap this per project */
-        --project-bg-image: url("../Images/YourProject/Cover.png");
-      }
-    </style>
-  </head>
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="navbar_container">
-        <a href="index.html" id="navbar_logo">
-          <img src="Images/logo.png" alt="Kaue King Logo" class="logo-image" />
-        </a>
-        <div class="navbar_toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="navbar_menu">
-          <li class="navbar_item"><a href="index.html" class="navbar_links">Home</a></li>
-          <li class="navbar_item"><a href="portfolio.html" class="navbar_links">Portfolio</a></li>
-          <li class="navbar_item"><a href="resume.html" class="navbar_links">Resume</a></li>
-          <li class="navbar_item"><a href="contact.html" class="navbar_links">Contact</a></li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title</title>
+  <link rel="stylesheet" href="Styles/stylesheet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      /* Swap this per project */
+      --project-bg-image: url("../Images/YourProject/Cover.png");
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar_container">
+      <a href="index.html" id="navbar_logo">
+        <img src="Images/logo.png" alt="Kaue King Logo" class="logo-image" />
+      </a>
+      <div class="navbar_toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-    </nav>
+      <ul class="navbar_menu">
+        <li class="navbar_item"><a href="index.html" class="navbar_links">Home</a></li>
+        <li class="navbar_item"><a href="portfolio.html" class="navbar_links">Portfolio</a></li>
+        <li class="navbar_item"><a href="resume.html" class="navbar_links">Resume</a></li>
+        <li class="navbar_item"><a href="contact.html" class="navbar_links">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Project Header -->
-    <section class="project-header">
-      <div class="container">
-        <h1>Project Title</h1>
-        <!-- Optional: <h2><i>Currently in Development</i></h2> -->
+  <!-- Project Header -->
+  <section class="project-header">
+    <div class="container">
+      <h1>Project Title</h1>
+      <!-- Optional: <h2><i>Currently in Development</i></h2> -->
 
-        <div class="project-info-grid">
-          <div>
-            <div class="header-video">
-              <div class="video-container">
-                <!-- Replace with your trailer / gameplay video -->
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/VIDEO_ID"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-              </div>
+      <div class="project-info-grid">
+        <div>
+          <div class="header-video">
+            <div class="video-container">
+              <!-- Replace with your trailer / gameplay video -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+          </div>
 
-            <br />
-            <h3>Game Overview</h3>
+          <br />
+          <h3>Game Overview</h3>
+          <p>
+            2–4 sentences describing the game fantasy, player goal, and what makes it unique.
+          </p>
+
+          <div class="project-buttons">
+            <a href="" class="btn" target="_blank">Download on itch.io</a>
+            <a href="portfolio.html" class="btn btn-outline">Back to Portfolio</a>
+          </div>
+        </div>
+
+        <div class="project-details">
+          <div class="project-detail-item">
+            <div class="detail-label">My Role</div>
+            <div class="detail-value">Gameplay Programmer</div>
+          </div>
+
+          <div class="project-detail-item">
+            <div class="detail-label">Project Duration</div>
+            <div class="detail-value">Month YYYY - Month YYYY</div>
+          </div>
+
+          <div class="project-detail-item">
+            <div class="detail-label">Genre</div>
+            <div class="detail-value">Genre Here</div>
+          </div>
+
+          <div class="project-detail-item">
+            <div class="detail-label">Platform</div>
+            <div class="detail-value">PC</div>
+          </div>
+
+          <div class="project-detail-item">
+            <div class="detail-label">Engine</div>
+            <div class="detail-value">Unity / Unreal Engine 5</div>
+          </div>
+
+          <div class="project-detail-item">
+            <div class="detail-label">Team Size</div>
+            <div class="detail-value"># people</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section with Gallery -->
+  <section class="media-section">
+    <div class="container">
+      <div id="projectGallery" class="gallery-container" data-gallery="project">
+        <!-- Gallery will be automatically initialized here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Overview -->
+  <section class="project-overview">
+    <div class="container">
+      <h2 class="section_title">Project <span>Overview</span></h2>
+
+      <div class="overview-grid">
+        <div>
+          <div class="overview-section">
+            <h3>Development Context</h3>
             <p>
-              2–4 sentences describing the game fantasy, player goal, and what makes it unique.
+              Describe the project goal, constraints, team setup, and what you were building.
             </p>
-
-            <div class="project-buttons">
-              <a href="" class="btn" target="_blank">Download on itch.io</a>
-              <a href="portfolio.html" class="btn btn-outline">Back to Portfolio</a>
-            </div>
+            <br />
+            <p>
+              Mention the main pillars (combat, narrative, AI, etc.) and any scope/competition context.
+            </p>
           </div>
+        </div>
 
-          <div class="project-details">
-            <div class="project-detail-item">
-              <div class="detail-label">My Role</div>
-              <div class="detail-value">Gameplay Programmer</div>
-            </div>
-
-            <div class="project-detail-item">
-              <div class="detail-label">Project Duration</div>
-              <div class="detail-value">Month YYYY - Month YYYY</div>
-            </div>
-
-            <div class="project-detail-item">
-              <div class="detail-label">Genre</div>
-              <div class="detail-value">Genre Here</div>
-            </div>
-
-            <div class="project-detail-item">
-              <div class="detail-label">Platform</div>
-              <div class="detail-value">PC</div>
-            </div>
-
-            <div class="project-detail-item">
-              <div class="detail-label">Engine</div>
-              <div class="detail-value">Unity / Unreal Engine 5</div>
-            </div>
-
-            <div class="project-detail-item">
-              <div class="detail-label">Team Size</div>
-              <div class="detail-value"># people</div>
-            </div>
+        <div>
+          <div class="overview-section">
+            <h3>My Contributions</h3>
+            <ul class="contribution-list">
+              <li>What you implemented (system-level)</li>
+              <li>What you improved or fixed (impact)</li>
+              <li>Any tools / pipelines you built</li>
+              <li>Collaboration / leadership (if applicable)</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Media Section with Gallery -->
-    <section class="media-section">
-      <div class="container">
-        <div id="projectGallery" class="gallery-container" data-gallery="project">
-          <!-- Gallery will be automatically initialized here -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Overview -->
-    <section class="project-overview">
-      <div class="container">
-        <h2 class="section_title">Project <span>Overview</span></h2>
-
-        <div class="overview-grid">
-          <div>
-            <div class="overview-section">
-              <h3>Development Context</h3>
-              <p>
-                Describe the project goal, constraints, team setup, and what you were building.
-              </p>
-              <br />
-              <p>
-                Mention the main pillars (combat, narrative, AI, etc.) and any scope/competition context.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <div class="overview-section">
-              <h3>My Contributions</h3>
-              <ul class="contribution-list">
-                <li>What you implemented (system-level)</li>
-                <li>What you improved or fixed (impact)</li>
-                <li>Any tools / pipelines you built</li>
-                <li>Collaboration / leadership (if applicable)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   <section class="project-overview">
     <div class="container">
@@ -198,22 +200,22 @@
     </div>
   </section>
 
-    <section class="project-overview">
-      <div class="container">
-        <div class="back-to-portfolio">
-          <a href="portfolio.html" class="btn">
-            <i class="fas fa-arrow-left"></i> Back to Portfolio
-          </a>
-        </div>
+  <section class="project-overview">
+    <div class="container">
+      <div class="back-to-portfolio">
+        <a href="portfolio.html" class="btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Footer -->
-   <footer>
+  <!-- Footer -->
+  <footer>
     <div class="footer_content">
       <div class="social_links">
-        <a href="https://www.linkedin.com/in/kaue-king-13a681304" class="social_link"
-          target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kaue-king-13a681304" class="social_link" target="_blank"
+          rel="noopener noreferrer">
           <i class="fab fa-linkedin-in"></i>
         </a>
 
@@ -224,29 +226,30 @@
     </div>
   </footer>
 
-    <script src="Scripts/app.js"></script>
-    <script src="Scripts/gallery.js"></script>
-    <script>
-      // Example gallery data
-      const projectGalleryData = [
-        {
-          type: "image",
-          src: "Images/YourProject/screenshot1.png",
-          thumbnail: "Images/YourProject/screenshot1.png",
-          title: "Caption 1",
-        },
-        {
-          type: "image",
-          src: "Images/YourProject/screenshot2.png",
-          thumbnail: "Images/YourProject/screenshot2.png",
-          title: "Caption 2",
-        },
-      ];
+  <script src="Scripts/app.js"></script>
+  <script src="Scripts/gallery.js"></script>
+  <script>
+    // Example gallery data
+    const projectGalleryData = [
+      {
+        type: "image",
+        src: "Images/YourProject/screenshot1.png",
+        thumbnail: "Images/YourProject/screenshot1.png",
+        title: "Caption 1",
+      },
+      {
+        type: "image",
+        src: "Images/YourProject/screenshot2.png",
+        thumbnail: "Images/YourProject/screenshot2.png",
+        title: "Caption 2",
+      },
+    ];
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const gallery = new MediaGallery("projectGallery", projectGalleryData);
-        console.log("Gallery initialized:", gallery);
-      });
-    </script>
-  </body>
+    document.addEventListener("DOMContentLoaded", function () {
+      const gallery = new MediaGallery("projectGallery", projectGalleryData);
+      console.log("Gallery initialized:", gallery);
+    });
+  </script>
+</body>
+
 </html>

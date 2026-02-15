@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S.O.R.N.</title>
     <link rel="stylesheet" href="Styles/stylesheet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
+        href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* Swap this per project */
-            --project-bg-image: url("../Images/YourProject/Cover.png");
+            --project-bg-image: url("../Images/SORN/SORNCover.PNG");
         }
     </style>
 </head>
@@ -175,9 +178,8 @@
                             </p>
                             <br />
                             <h5>Weapon Switching</h5>
-                            <iframe width="1050" height="700"
-                                src="Videos/SORN/WeaponChange.webm"
-                                title="WeaponChange" frameborder="0"
+                            <iframe width="1050" height="700" src="Videos/SORN/WeaponChange.webm" title="WeaponChange"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <br />
@@ -275,13 +277,13 @@ void AMechCharacter::UpdateMechPartVisuals(EMechBodyPart MechPart, UDA_MechPartD
                                 There is a master material which has parameters for
                                 a texture mask, a primary color, and a secondary color. There is then a series of lerp
                                 and multiply nodes which blend the colors
-                                based on the texture mask. Players can select their colors using a color picker UI, and the selected colors are then applied
+                                based on the texture mask. Players can select their colors using a color picker UI, and
+                                the selected colors are then applied
                                 to the material parameters using a dynamic material instance.
                             </p>
                             <br />
                             <h5>Color Customization</h5>
-                            <iframe width="1050" height="700"
-                                src="Videos/SORN/Color Customization.webm"
+                            <iframe width="1050" height="700" src="Videos/SORN/Color Customization.webm"
                                 title="ColorCustomization" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -304,43 +306,43 @@ void AMechCharacter::UpdateMechPartVisuals(EMechBodyPart MechPart, UDA_MechPartD
                         <summary>Weapons</summary>
                         <div class="system-body">
                             <p>
-                                Mechs can equip different weapons on their arms which are then used in combat. Each weapon has its own unique behavior 
-                                and properties, and they are implemented using Unreal's Gameplay Ability System. There is a base weapon class which
-                                is used for standard weapons, such as the minigun and shotgun. A charged weapon class inherits this class and is used for
-                                the railgun and charge pistol. The final weapon class is the beam weapon which shoots a laset that deals consistent tick damage.
+                                Mechs can equip different weapons on their arms which are then used in combat. Each
+                                weapon has its own unique behavior
+                                and properties, and they are implemented using Unreal's Gameplay Ability System. There
+                                is a base weapon class which
+                                is used for standard weapons, such as the minigun and shotgun. A charged weapon class
+                                inherits this class and is used for
+                                the railgun and charge pistol. The final weapon class is the beam weapon which shoots a
+                                laset that deals consistent tick damage.
                             </p>
                             <br />
                             <h5>Shotgun</h5>
-                            <iframe width="1050" height="700"
-                                src="Videos/SORN/Shotgun.mp4"
-                                title="Shotgun" frameborder="0"
+                            <iframe width="1050" height="700" src="Videos/SORN/Shotgun.mp4" title="Shotgun"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <br />
                             <br />
                             <h5>Charge Pistol</h5>
-                            <p>The charge pistol has a charging bonus where the damage scales with the charge time. Additionally, if players release the fire button 
+                            <p>The charge pistol has a charging bonus where the damage scales with the charge time.
+                                Additionally, if players release the fire button
                                 within a short window, it deals additional damage.
                             </p>
-                            <iframe width="1050" height="700"
-                                src="Videos/SORN/Pistol and Scaling Damage.webm"
+                            <iframe width="1050" height="700" src="Videos/SORN/Pistol and Scaling Damage.webm"
                                 title="Charge Pistol" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <br />
                             <br />
                             <h5>Railgun</h5>
-                            <iframe width="1050" height="700"
-                                src="Videos/SORN/Railgun.webm"
-                                title="Railgun" frameborder="0"
+                            <iframe width="1050" height="700" src="Videos/SORN/Railgun.webm" title="Railgun"
+                                frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <br />
                             <br />
                             <h5>Beam</h5>
-                            <iframe width="1050" height="700"
-                                src="Videos/SORN/Laser.mp4"
-                                title="Beam" frameborder="0"
+                            <iframe width="1050" height="700" src="Videos/SORN/Laser.mp4" title="Beam" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             <br />
@@ -362,20 +364,20 @@ void AMechCharacter::UpdateMechPartVisuals(EMechBodyPart MechPart, UDA_MechPartD
     </section>
 
     <!-- Footer -->
-   <footer>
-    <div class="footer_content">
-      <div class="social_links">
-        <a href="https://www.linkedin.com/in/kaue-king-13a681304" class="social_link"
-          target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
+    <footer>
+        <div class="footer_content">
+            <div class="social_links">
+                <a href="https://www.linkedin.com/in/kaue-king-13a681304" class="social_link" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
 
-        <a href="https://github.com/kingkaue" class="social_link" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+                <a href="https://github.com/kingkaue" class="social_link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="Scripts/app.js"></script>
     <script src="Scripts/gallery.js"></script>
