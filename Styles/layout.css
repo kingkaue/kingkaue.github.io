@@ -27,12 +27,12 @@
 .project-info-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 40px;
-  margin-top: 40px;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .overview-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 24px;
 }
